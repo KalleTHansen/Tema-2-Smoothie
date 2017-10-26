@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+.site { /*Wrapper rundt om body. Begrænser sidebredden og bibeholder bg farve*/
+  max-width: 700px;
+  margin:auto;
+}
+
+body {
+	margin-top: 0%;
+	padding: 0%;
+	background-color: #fbe8ea;
+}
+
+header img { /*Logo img*/
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0; /*Ingen luft rundt om kassen*/
+  text-align: center;
+  border: 0;
+  padding-left: 0; /*Fjerner det store mellemrum inden bar*/
+}
+
+nav li {
+    float: left; /*Listelementer skrives på samme linje*/
+    font-size: 3.5vmin;
+    text-decoration-line: none; /*Ingen understregning*/
+    border-right: 0.5vw solid #fbe8ea; /*Streger, der separerer hvert link*/
+    min-width: 25%; /*Fordeler elementerne, så de fylder 25% af bredden*/
+}
+
+nav li:last-child {
+    border-right: none; /*Ingen streg efter sidste element*/
+}
+/*nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 100%;
+	font-family: "Oswald", sans-serif;
+}*/
+
+nav li a { /*De enkelte links på nav*/
+  display: block; /*Makes the whole link area clickable (not just the text)*/
+  text-decoration: none;
+  color: #315e00;
+  font-family: sans-serif;
+  padding: 8% 4%;
+  background-color:#FFAD56;
+  margin:0;
+}
+
+#galleryfix { /*hr der laver afstand under nav*/
+  border-color: rgba(0, 0, 0, 0); /*Usynlig*/
+}
+
+#popular { /*overskrift på forside*/
+  text-align: center;
+  font-size: 7vmin;
+}
+
+#HQpic { /*Billede af hovedkvarter på om os*/
+  width: 100%;
+  margin: 0;
+}
+
+#HQpic img {
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Oswald", sans-serif;
+  color: #315e00;
+}
+
+h2 {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+h3 {
+  margin: 3% auto 1%;
+}
+
+h4 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 120%;
+}
+
+p {
+  margin-top: 1%;
+  max-width: 100%;
+  font-family: "Raleway", serif;
+  font-size: 100%;
+}
+/*
+a {
+  color: inherit;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {                           WOLFS LINKS
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
+a:visited {
+  background-color: #315e00;
+}
+a:hover {
+  background-color: #639c00;
+}
+a:active {
+  background-color: #639c00;
+}*/
+
+.galleri { /*Både billeder og knapper i galleri*/
+  position: relative; /*Tillader placering af knapper oven på billeder*/
+}
+
+.mySlides { /*Billeder i slideshow*/
+  width:100%; /*Hele sidens bredde*/
+  display: block;
+}
+
+button { /*Pile i galleri*/
+  background-color: rgba(0,0,0,0.4); /*Sort farve med 40% opacity*/
+  font-size: 100%; /*Skalerer efter viewport width*/
+  color: white;
+  border: none;
+  padding: 5%; /*Både padding og pilens størrelse skalerer efter bredde*/
+  position: absolute; /*Tillader placering af knapper oven på billeder*/
+  top: 43%;
+}
+
+.w3-display-left { /*Knap til at vise forrige billede i slideshow*/
+  left:0;
+}
+
+.w3-display-right { /*Knap til at vise næste billede i slideshow*/
+  right: 0; /*Afstanden fra højre kant af kassen skal være 0*/
+}
+
+
+/*Billeder af produkter på forsiden*/
+.gallery {
+  margin: 2% 20% 20%;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: #315e00;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+div .gallery a {
+  color: #315e00;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+
+
+@media only screen and (max-width: 699px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 250px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+th img {
+  width: 30%;
+}
+
+th  {
+  width: 50%;
+}
+
+table tr th p {
+  font-family: "Oswald", sans-serif;
+}
+
+#pageselect {
+  float: left;
+}
+
+.loc { /*Liste over butikker, der sælger produkter*/
+  padding-left: 0;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  list-style: none;
+  text-align: center;
+
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.loc a {
+  color: #315e00;
+}
+
+iframe{
+  /* sørger for at iframe/Google maps følger skærmens størrelse*/
+    max-width: 100%;
+}
+
+hr { /*Opdelende vandret streg*/
+  margin-top: 5%;
+}
+
+footer .social {
+  padding: 0;
+  text-align: center; /*Centrerer ikoner på siden*/
+}
+
+footer .social ul {
+  /*fjerner styling på listen*/
+  list-style-type: none;
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+.social li{
+  /*sørger for at indholdet står på en horisontal linje*/
+  display: inline;
+}
+
+.social img{
+  /*kontrollerer størrelsen på social media ikonerne*/
+  margin:0;
+  padding: 0;
+  width: 10%;
+  max-width: 100%;
+}
+
+footer p{ /*Copyright tekst i footer*/
+    text-align: center;
+}

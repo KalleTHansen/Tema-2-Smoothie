@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+
+      <title>FreshUP smoothies | Forside</title>
+      <!--Favicon, f.eks. på browsertab-->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/manifest.json">
+      <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#639c00">
+      <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <div class= "site">
+  <body>
+    <header>
+      <a href="forside.html"><img src="img/Freshup-logo.png" alt="Logo"></a>
+      <nav>
+        <ul>
+          <li><a href="forside.html">Forside</a></li>
+          <li><a href="produkter.html">Produkter</a></li>
+          <li><a href="omos.html">Om os</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <hr id="galleryfix">
+    <div class=galleri> <!--Knapper til at skifte billede-->
+      <button class="w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+      <a href="omos.html">
+      <img class="mySlides" src="img/slide1.jpg"> <!--Billeder til galleriet-->
+      <img class="mySlides" src="img/slide2.jpg">
+      <img class="mySlides" src="img/slide3.jpg">
+      </a>
+
+    </div>
+
+    <script>
+      var slideIndex = 1; /*Første billede vælges*/
+      showDivs(slideIndex);
+
+      function plusDivs(n) { /*Læg en til variablen, når der trykkes på pil højre*/
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1} /*Hvis n er større end antallet af billeder, vælges billede 1*/
+        if (n < 1) {slideIndex = x.length} /*Hvis n er mindre end 1, vælges det sidste billede*/
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+
+    <h1 id="popular">Populære smoothies</h1>
+
+ <!--Billeder af populære produkter-->
+    <div class="responsive">
+      <div class="gallery">
+        <a href="familie.html">
+          <img src="img/JuicySmoothie.png" alt="Æblesmoothie">
+        <div class="desc">Juicy Apple</div> </a>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a href="familie.html">
+          <img src="img/OrangeSmoothie.png" alt="Appelsinsmoothie">
+        <div class="desc">Orange Power</div></a>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a href="fitness.html">
+          <img src="img/PureSmoothie.png" alt="Kiwismoothie">
+        <div class="desc">Pure Energy</div></a>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a href="familie.html">
+          <img src="img/PinkSmoothie.png" alt="Kirsebærsmoothie">
+        <div class="desc">Pink Energy</div></a>
+      </div>
+    </div>
+
+
+    <!--footer med social media ikoner, som linker til siderne-->
+    <footer>
+      <hr>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/">
+            <img src="foot_img/if_facebook_2308066.png" alt="Facebook Ikon"></a></li>
+        <li><a href="https://twitter.com/">
+            <img src="foot_img/if_twitter_2308045.png" alt="Twitter Ikon"></a></li>
+        <li><a href="https://www.instagram.com/">
+            <img src="foot_img/if_instagram_2308118.png" alt="Instagram Ikon"></a></li>
+        <li><a href="https://www.youtube.com/">
+            <img src="foot_img/if_youtube_2308143.png" alt="Youtube Ikon"></a></li>
+      </ul>
+
+      <p>Copyright© 2017 FreshUP. Alle rettigheder forbeholdes.</p>
+    </footer>
+  </body>
+</div><!--Afslutning af wrapper-->
+</html>
